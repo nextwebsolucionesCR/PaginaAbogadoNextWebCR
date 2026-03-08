@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad | Lic. Maicol Ruiz</title>
+    <meta name="description"
+        content="Política de privacidad del sitio web del Lic. Maicol Ruiz, abogado en Costa Rica.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'obsidian': '#121212',
+                        'charcoal': '#1E1E1E',
+                        'gold': '#B9975B',
+                        'gold-light': '#D4B87A',
+                        'ivory': '#F5F5F5'
+                    },
+                    fontFamily: {
+                        'display': ['Cormorant Garamond', 'serif'],
+                        'body': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg: #F5F5F5;
+            --bg-alt: #FFFFFF;
+            --fg: #121212;
+            --fg-muted: #4A4A4A;
+            --accent: #B9975B;
+            --accent-hover: #D4B87A;
+            --card: #FFFFFF;
+            --border: #E0E0E0;
+        }
+
+        .dark-mode {
+            --bg: #121212;
+            --bg-alt: #1E1E1E;
+            --fg: #F5F5F5;
+            --fg-muted: #A0A0A0;
+            --accent: #B9975B;
+            --accent-hover: #D4B87A;
+            --card: #1E1E1E;
+            --border: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg);
+            color: var(--fg);
+            transition: background-color 0.4s ease, color 0.4s ease;
+            min-height: 100vh;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--fg);
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: var(--bg);
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            padding: 0.6rem 1.2rem;
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            color: var(--fg);
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .lang-toggle:hover {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: var(--bg);
+        }
+
+        /* Floating Icons - LADO IZQUIERDO */
+        .floating-icons {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 999;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .floating-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .floating-btn:hover::before {
+            opacity: 1;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1) translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .floating-btn svg {
+            position: relative;
+            z-index: 1;
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        }
+
+        .phone-btn {
+            background: linear-gradient(135deg, #B9975B 0%, #9A7B4A 100%);
+        }
+
+        @media (max-width: 768px) {
+            .floating-icons {
+                left: 1rem;
+                bottom: 1.5rem;
+            }
+
+            .floating-btn {
+                width: 52px;
+                height: 52px;
+            }
+        }
+
+        /* ============================================
+           MARCA DE AGUA - NEXTWEB CR
+           ============================================ */
+        .nextweb-badge {
+            position: fixed;
+            bottom: 140px;
+            right: 20px;
+            z-index: 998;
+            background: rgba(18, 18, 18, 0.95);
+            border: 2px solid #B9975B;
+            border-radius: 4px;
+            padding: 8px 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .nextweb-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(185, 151, 91, 0.4);
+            border-color: #D4B87A;
+        }
+
+        .nextweb-badge img {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+        }
+
+        .nextweb-badge-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nextweb-badge-text span:first-child {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 0.02em;
+        }
+
+        .nextweb-badge-text span:last-child {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #B9975B;
+            letter-spacing: 0.02em;
+        }
+
+        @media (max-width: 768px) {
+            .nextweb-badge {
+                bottom: 130px;
+                right: 15px;
+                padding: 6px 10px;
+            }
+
+            .nextweb-badge img {
+                width: 22px;
+                height: 22px;
+            }
+
+            .nextweb-badge-text span:first-child {
+                font-size: 0.55rem;
+            }
+
+            .nextweb-badge-text span:last-child {
+                font-size: 0.75rem;
+            }
+        }
+
+        /* Content Styles */
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(185, 151, 91, 0.1) 0%, rgba(185, 151, 91, 0.05) 100%);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .section-heading {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--fg);
+        }
+
+        .section-text {
+            color: var(--fg-muted);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            gap: 0.75rem;
+        }
+
+        .divider {
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            margin: 1rem 0 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="py-5 px-6 border-b" style="border-color: var(--border); background: var(--bg-alt);">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-display font-semibold"
+                style="color: var(--fg); text-decoration: none;">
+                Lic. Maicol <span style="color: var(--accent);">Ruiz</span>
+            </a>
+            <div class="flex items-center gap-3">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma">
+                    <span class="lang-text">ES</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-12 md:py-20 px-6">
+        <div class="content-wrapper">
+            <h1 class="section-title" data-i18n="privacy_title">Política de Privacidad</h1>
+            <div class="divider"></div>
+
+            <div class="highlight-box">
+                <p class="text-lg font-medium" style="color: var(--fg);">
+                    <strong style="color: var(--accent);" data-i18n="privacy_notice_label">Aviso Importante:</strong>
+                    <span data-i18n="privacy_notice_text">Este sitio web es un proyecto de demostración y ejemplo, no
+                        representa un bufete de abogados real ni servicios legales oficiales.</span>
+                </p>
+            </div>
+
+            <h2 class="section-heading" data-i18n="privacy_section1_title">1. Naturaleza del Sitio</h2>
+            <p class="section-text" data-i18n="privacy_section1_text">
+                Este sitio web ha sido creado únicamente con fines demostrativos y educativos. No constituye una oferta
+                de servicios legales ni representa a ningún profesional del derecho activo. Toda la información
+                presentada es ficticia y ha sido diseñada para mostrar capacidades de desarrollo web.
+            </p>
+
+            <h2 class="section-heading" data-i18n="privacy_section2_title">2. Imágenes y Contenido Multimedia</h2>
+            <p class="section-text" data-i18n="privacy_section2_text">
+                Todas las imágenes, fotografías y videos presentados en este sitio han sido generados mediante
+                inteligencia artificial. No buscan suplantar la identidad de ninguna persona, ya sea viva o fallecida.
+                Cualquier similitud con personas reales es puramente coincidencial y no intencional.
+            </p>
+
+            <h2 class="section-heading" data-i18n="privacy_section3_title">3. Datos Personales</h2>
+            <p class="section-text" data-i18n="privacy_section3_text">
+                Este sitio de demostración no recopila, almacena ni procesa datos personales reales. Los formularios
+                presentes son únicamente ilustrativos y no envían información a ningún servidor. No se utilizan cookies
+                de seguimiento ni tecnologías similares.
+            </p>
+
+            <h2 class="section-heading" data-i18n="privacy_section4_title">4. Contacto</h2>
+            <p class="section-text" data-i18n="privacy_section4_text">
+                Los números de teléfono, direcciones de correo electrónico y ubicaciones mostrados son ficticios y han
+                sido incluidos exclusivamente como elementos de diseño. No representan información de contacto real.
+            </p>
+
+            <h2 class="section-heading" data-i18n="privacy_section5_title">5. Responsabilidad</h2>
+            <p class="section-text" data-i18n="privacy_section5_text">
+                El creador de este sitio de demostración no se hace responsable del mal uso que pueda darse al contenido
+                aquí presentado. Este sitio debe ser considerado únicamente como una muestra de desarrollo web frontend.
+            </p>
+
+            <div class="mt-12 pt-8 border-t" style="border-color: var(--border);">
+                <a href="index.html" class="back-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                    <span data-i18n="privacy_back">Volver al inicio</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t" style="border-color: var(--border); background: var(--bg-alt);">
+        <div class="max-w-5xl mx-auto text-center text-sm" style="color: var(--fg-muted);">
+            <p data-i18n="privacy_footer">© 2024 Sitio de demostración. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Icons - LADO IZQUIERDO -->
+    <div class="floating-icons">
+        <a href="tel:00000000000" class="floating-btn phone-btn" aria-label="Llamar">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+        </a>
+        <a href="https://wa.me/00000000000?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta" target="_blank"
+            rel="noopener noreferrer" class="floating-btn whatsapp-btn" aria-label="WhatsApp">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- Marca de Agua NextWeb CR -->
+    <a href="https://nextweb.cr" target="_blank" rel="noopener noreferrer" class="nextweb-badge"
+        title="Desarrollado por NextWeb CR">
+        <img src="https://res.cloudinary.com/dicrov8ka/image/upload/v1772083376/logo_h9plf1.jpg" alt="NextWeb CR Logo">
+        <div class="nextweb-badge-text">
+            <span>Desarrollado por</span>
+            <span>NextWeb CR</span>
+        </div>
+    </a>
+
+    <!-- Tawk.to Script -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/69633d7c987b03197cb20051/1jelqgcbd';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+
+    <script>
+        /* =========================================
+           START: Internationalization (i18n) Logic
+           ========================================= */
+
+        const translations = {
+            es: {
+                privacy_title: "Política de Privacidad",
+                privacy_notice_label: "Aviso Importante:",
+                privacy_notice_text: "Este sitio web es un proyecto de demostración y ejemplo, no representa un bufete de abogados real ni servicios legales oficiales.",
+                privacy_section1_title: "1. Naturaleza del Sitio",
+                privacy_section1_text: "Este sitio web ha sido creado únicamente con fines demostrativos y educativos. No constituye una oferta de servicios legales ni representa a ningún profesional del derecho activo. Toda la información presentada es ficticia y ha sido diseñada para mostrar capacidades de desarrollo web.",
+                privacy_section2_title: "2. Imágenes y Contenido Multimedia",
+                privacy_section2_text: "Todas las imágenes, fotografías y videos presentados en este sitio han sido generados mediante inteligencia artificial. No buscan suplantar la identidad de ninguna persona, ya sea viva o fallecida. Cualquier similitud con personas reales es puramente coincidencial y no intencional.",
+                privacy_section3_title: "3. Datos Personales",
+                privacy_section3_text: "Este sitio de demostración no recopila, almacena ni procesa datos personales reales. Los formularios presentes son únicamente ilustrativos y no envían información a ningún servidor. No se utilizan cookies de seguimiento ni tecnologías similares.",
+                privacy_section4_title: "4. Contacto",
+                privacy_section4_text: "Los números de teléfono, direcciones de correo electrónico y ubicaciones mostrados son ficticios y han sido incluidos exclusivamente como elementos de diseño. No representan información de contacto real.",
+                privacy_section5_title: "5. Responsabilidad",
+                privacy_section5_text: "El creador de este sitio de demostración no se hace responsable del mal uso que pueda darse al contenido aquí presentado. Este sitio debe ser considerado únicamente como una muestra de desarrollo web frontend.",
+                privacy_back: "Volver al inicio",
+                privacy_footer: "© 2024 Sitio de demostración. Todos los derechos reservados."
+            },
+            en: {
+                privacy_title: "Privacy Policy",
+                privacy_notice_label: "Important Notice:",
+                privacy_notice_text: "This website is a demonstration and example project, it does not represent a real law firm or official legal services.",
+                privacy_section1_title: "1. Nature of the Site",
+                privacy_section1_text: "This website has been created solely for demonstration and educational purposes. It does not constitute an offer of legal services nor does it represent any active legal professional. All information presented is fictitious and has been designed to showcase web development capabilities.",
+                privacy_section2_title: "2. Images and Multimedia Content",
+                privacy_section2_text: "All images, photographs, and videos presented on this site have been generated using artificial intelligence. They do not seek to impersonate any person, whether living or deceased. Any resemblance to real persons is purely coincidental and unintentional.",
+                privacy_section3_title: "3. Personal Data",
+                privacy_section3_text: "This demonstration site does not collect, store, or process real personal data. The forms present are for illustration purposes only and do not send information to any server. No tracking cookies or similar technologies are used.",
+                privacy_section4_title: "4. Contact",
+                privacy_section4_text: "The phone numbers, email addresses, and locations shown are fictitious and have been included exclusively as design elements. They do not represent real contact information.",
+                privacy_section5_title: "5. Responsibility",
+                privacy_section5_text: "The creator of this demonstration site is not responsible for any misuse of the content presented here. This site should be considered only as a frontend web development showcase.",
+                privacy_back: "Back to home",
+                privacy_footer: "© 2024 Demonstration site. All rights reserved."
+            },
+            pt: {
+                privacy_title: "Política de Privacidade",
+                privacy_notice_label: "Aviso Importante:",
+                privacy_notice_text: "Este site é um projeto de demonstração e exemplo, não representa um escritório de advocacia real nem serviços legais oficiais.",
+                privacy_section1_title: "1. Natureza do Site",
+                privacy_section1_text: "Este site foi criado exclusivamente para fins demonstrativos e educacionais. Não constitui uma oferta de serviços legais nem representa nenhum profissional do direito ativo. Toda a informação apresentada é fictícia e foi desenhada para mostrar capacidades de desenvolvimento web.",
+                privacy_section2_title: "2. Imagens e Conteúdo Multimídia",
+                privacy_section2_text: "Todas as imagens, fotografias e vídeos apresentados neste site foram gerados por inteligência artificial. Não buscam suplantar a identidade de nenhuma pessoa, seja viva ou falecida. Qualquer semelhança com pessoas reais é puramente coincidente e não intencional.",
+                privacy_section3_title: "3. Dados Pessoais",
+                privacy_section3_text: "Este site de demonstração não recolhe, armazena nem processa dados pessoais reais. Os formulários presentes são apenas ilustrativos e não enviam informação para nenhum servidor. Não são utilizados cookies de rastreamento nem tecnologias similares.",
+                privacy_section4_title: "4. Contacto",
+                privacy_section4_text: "Os números de telefone, endereços de email e localizações mostrados são fictícios e foram incluídos exclusivamente como elementos de design. Não representam informação de contacto real.",
+                privacy_section5_title: "5. Responsabilidade",
+                privacy_section5_text: "O criador deste site de demonstração não se responsabiliza pelo mau uso que possa ser dado ao conteúdo aqui apresentado. Este site deve ser considerado apenas como uma amostra de desenvolvimento web frontend.",
+                privacy_back: "Voltar ao início",
+                privacy_footer: "© 2024 Site de demonstração. Todos os direitos reservados."
+            },
+            fr: {
+                privacy_title: "Politique de Confidentialité",
+                privacy_notice_label: "Avis Important:",
+                privacy_notice_text: "Ce site web est un projet de démonstration et d'exemple, il ne représente pas un cabinet d'avocats réel ni des services juridiques officiels.",
+                privacy_section1_title: "1. Nature du Site",
+                privacy_section1_text: "Ce site web a été créé uniquement à des fins de démonstration et éducatives. Il ne constitue pas une offre de services juridiques et ne représente aucun professionnel du droit actif. Toutes les informations présentées sont fictives et ont été conçues pour présenter les capacités de développement web.",
+                privacy_section2_title: "2. Images et Contenu Multimédia",
+                privacy_section2_text: "Toutes les images, photographies et vidéos présentées sur ce site ont été générées par intelligence artificielle. Elles ne cherchent pas à usurper l'identité d'une personne, vivante ou décédée. Toute ressemblance avec des personnes réelles est purement fortuite et non intentionnelle.",
+                privacy_section3_title: "3. Données Personnelles",
+                privacy_section3_text: "Ce site de démonstration ne collecte, ne stocke ni ne traite de données personnelles réelles. Les formulaires présents sont uniquement illustratifs et n'envoient d'informations à aucun serveur. Aucun cookie de suivi ni technologie similaire n'est utilisé.",
+                privacy_section4_title: "4. Contact",
+                privacy_section4_text: "Les numéros de téléphone, adresses e-mail et emplacements affichés sont fictifs et ont été inclus exclusivement comme éléments de conception. Ils ne représentent pas de véritables informations de contact.",
+                privacy_section5_title: "5. Responsabilité",
+                privacy_section5_text: "Le créateur de ce site de démonstration n'est pas responsable de l'utilisation abusive qui pourrait être faite du contenu présenté ici. Ce site doit être considéré uniquement comme une vitrine de développement web frontend.",
+                privacy_back: "Retour à l'accueil",
+                privacy_footer: "© 2024 Site de démonstration. Tous droits réservés."
+            },
+            zh: {
+                privacy_title: "隐私政策",
+                privacy_notice_label: "重要提示：",
+                privacy_notice_text: "本网站是一个演示和示例项目，不代表真实的律师事务所或官方法律服务。",
+                privacy_section1_title: "1. 网站性质",
+                privacy_section1_text: "本网站仅用于演示和教育目的而创建。它不构成法律服务要约，也不代表任何活跃的法律专业人士。所有呈现的信息都是虚构的，旨在展示网页开发能力。",
+                privacy_section2_title: "2. 图像和多媒体内容",
+                privacy_section2_text: "本网站展示的所有图像、照片和视频均由人工智能生成。它们不试图冒充任何人，无论其是否在世。任何与真实人物的相似纯属巧合，并非有意为之。",
+                privacy_section3_title: "3. 个人数据",
+                privacy_section3_text: "本演示网站不收集、存储或处理真实的个人数据。存在的表单仅作说明用途，不向任何服务器发送信息。不使用跟踪cookies或类似技术。",
+                privacy_section4_title: "4. 联系方式",
+                privacy_section4_text: "显示的电话号码、电子邮件地址和位置都是虚构的，仅作为设计元素包含在内。它们不代表真实的联系信息。",
+                privacy_section5_title: "5. 责任",
+                privacy_section5_text: "本演示网站的创建者对本文所述内容可能被滥用不承担责任。本网站应仅被视为前端网页开发展示。",
+                privacy_back: "返回首页",
+                privacy_footer: "© 2024 演示网站。保留所有权利。"
+            }
+        };
+
+        const langToggleBtn = document.getElementById('lang-toggle');
+        const langTextSpan = langToggleBtn ? langToggleBtn.querySelector('.lang-text') : null;
+        const availableLangs = Object.keys(translations);
+        const DEFAULT_LANG = translations.es ? 'es' : (availableLangs[0] || 'es');
+        let currentLang = localStorage.getItem('language') || DEFAULT_LANG;
+        if (!translations[currentLang]) currentLang = DEFAULT_LANG;
+
+        function getText(lang, key) {
+            if (translations[lang] && translations[lang][key] != null) return translations[lang][key];
+            if (translations[DEFAULT_LANG] && translations[DEFAULT_LANG][key] != null) return translations[DEFAULT_LANG][key];
+            return null;
+        }
+
+        function updateLanguage(lang) {
+            if (!translations[lang]) lang = DEFAULT_LANG;
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const value = getText(lang, key);
+                if (value == null) return;
+                let textNodeFound = false;
+                element.childNodes.forEach(node => {
+                    if (node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0) {
+                        node.textContent = value;
+                        textNodeFound = true;
+                    }
+                });
+                if (!textNodeFound && element.children.length === 0) {
+                    element.textContent = value;
+                }
+            });
+            if (langTextSpan) {
+                langTextSpan.textContent = lang.toUpperCase();
+            }
+            localStorage.setItem('language', lang);
+            currentLang = lang;
+        }
+
+        updateLanguage(currentLang);
+
+        if (langToggleBtn) {
+            langToggleBtn.addEventListener('click', () => {
+                const idx = availableLangs.indexOf(currentLang);
+                const nextLang = availableLangs[(idx + 1) % availableLangs.length] || DEFAULT_LANG;
+                updateLanguage(nextLang);
+            });
+        }
+
+        /* =========================================
+           END: Internationalization (i18n) Logic
+           ========================================= */
+
+        /* =========================================
+           START: Theme Toggle Logic
+           ========================================= */
+
+        const themeBtn = document.getElementById('theme-toggle');
+        const themeIcon = themeBtn ? themeBtn.querySelector('i') : null;
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        let initialTheme = 'light';
+        if (savedTheme === 'dark' || savedTheme === 'light') {
+            initialTheme = savedTheme;
+        } else {
+            initialTheme = systemPrefersDark ? 'dark' : 'light';
+        }
+        document.body.classList.toggle('dark-mode', initialTheme === 'dark');
+
+        function updateThemeUI(isDark) {
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            if (themeIcon) {
+                themeIcon.classList.toggle('fa-sun', isDark);
+                themeIcon.classList.toggle('fa-moon', !isDark);
+            }
+            if (themeBtn) {
+                themeBtn.setAttribute('aria-pressed', String(isDark));
+            }
+        }
+
+        updateThemeUI(initialTheme === 'dark');
+
+        if (themeBtn) {
+            themeBtn.addEventListener('click', () => {
+                const isDark = !document.body.classList.contains('dark-mode');
+                document.body.classList.toggle('dark-mode', isDark);
+                updateThemeUI(isDark);
+            });
+        }
+
+        /* =========================================
+           END: Theme Toggle Logic
+           ========================================= */
+
+        /* =========================================
+           DESHABILITAR CLICK DERECHO E INSPECCIONAR
+           ========================================= */
+        (function () {
+            // Deshabilitar click derecho
+            document.addEventListener('contextmenu', function (e) {
+                e.preventDefault();
+                return false;
+            });
+
+            // Deshabilitar teclas de inspección
+            document.addEventListener('keydown', function (e) {
+                // F12
+                if (e.key === 'F12' || e.keyCode === 123) {
+                    e.preventDefault();
+                    return false;
+                }
+
+                // Ctrl+Shift+I (Inspeccionar)
+                if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.keyCode === 73)) {
+                    e.preventDefault();
+                    return false;
+                }
+
+                // Ctrl+Shift+J (Consola)
+                if (e.ctrlKey && e.shiftKey && (e.key === 'J' || e.key === 'j' || e.keyCode === 74)) {
+                    e.preventDefault();
+                    return false;
+                }
+
+                // Ctrl+Shift+C (Inspeccionar elemento)
+                if (e.ctrlKey && e.shiftKey && (e.key === 'C' || e.key === 'c' || e.keyCode === 67)) {
+                    e.preventDefault();
+                    return false;
+                }
+
+                // Ctrl+U (Ver código fuente)
+                if (e.ctrlKey && (e.key === 'U' || e.key === 'u' || e.keyCode === 85)) {
+                    e.preventDefault();
+                    return false;
+                }
+
+                // Ctrl+S (Guardar)
+                if (e.ctrlKey && (e.key === 'S' || e.key === 's' || e.keyCode === 83)) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            // Deshabilitar arrastrar imágenes
+            document.addEventListener('dragstart', function (e) {
+                if (e.target.tagName === 'IMG') {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            // Deshabilitar selección de texto en elementos sensibles
+            document.addEventListener('selectstart', function (e) {
+                if (e.target.tagName === 'IMG') {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>
